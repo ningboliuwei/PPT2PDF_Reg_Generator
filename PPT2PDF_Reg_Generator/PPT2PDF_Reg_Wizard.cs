@@ -58,6 +58,8 @@ namespace PPT2PDF_Reg_Generator
 
 				btnStep1.Enabled = false;
 				btnStep2.Enabled = true;
+
+				btnStep1.Text = "脚本文件已成功生成在所选文件夹下";
 			}
 		}
 
