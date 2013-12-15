@@ -1,0 +1,38 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.12\shell\toPDF]
+@="转换为PDF格式"
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.12\shell\toPDF\command]
+@="C:\\Windows\\system32\\wscript.exe @vbspath \"%1\""
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.8\shell\toPDF]
+@="转换为PDF格式"
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.8\shell\toPDF\command]
+@="C:\\Windows\\system32\\wscript.exe @vbspath \"%1\""
+
+[HKEY_CLASSES_ROOT\Word.Document.12\shell\toPDF]
+@="转换为PDF格式"
+
+[HKEY_CLASSES_ROOT\Word.Document.12\shell\toPDF\command]
+@="C:\\Windows\\system32\\wscript.exe @vbspath \"%1\""
+
+[HKEY_CLASSES_ROOT\Word.Document.8\shell\toPDF]
+@="转换为PDF格式"
+
+[HKEY_CLASSES_ROOT\Word.Document.8\shell\toPDF\command]
+@="C:\\Windows\\system32\\wscript.exe @vbspath \"%1\""
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.12\shell\toRTF]
+@="转换为RTF格式"
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.12\shell\toRTF\command]
+@="C:\\Windows\\system32\\wscript.exe @vbspath \"%1\" rtf"
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.8\shell\toRTF]
+@="转换为RTF格式"
+
+[HKEY_CLASSES_ROOT\PowerPoint.Show.8\shell\toRTF\command]
+@="C:\\Windows\\system32\\wscript.exe @vbspath \"%1\" rtf"
+

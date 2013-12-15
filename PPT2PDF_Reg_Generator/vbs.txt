@@ -1,0 +1,46 @@
+Set argv = WScript.Arguments
+if argv.Count<1 then
+	WScript.Quit
+end if
+filename = argv(0)
+sep = InStrRev(filename, ".")
+if sep = -1 then
+	msgbox("No extension detected in filename: " + filename)
+	WScript.Quit
+end if
+ext = right(filename, len(filename) - sep)
+if ext = "ppt" Or ext = "pptx" then
+	Set app = CreateObject("PowerPoint.Application")
+	Set myFile = app.Presentations.Open(filename)
+elseif ext = "doc" Or ext = "docx" then
+	Set app = CreateObject("Word.Application")
+	Set myFile = app.Documents.Open(filename)
+else
+	msgbox("Unknown extension: " + ext)
+	WScript.Quit
+end if
+if argv.Count>=2 then
+	fullname = left(filename, sep) + argv(1)
+	if argv(1) <> "rtf" then
+		msgbox("Unknown extension: " + argv(1))
+		WScript.Quit
+	end if
+	if ext = "ppt" Or ext = "pptx" then
+		iSaveAsFileType = 6'rtf
+	else
+		msgbox("Sorry~")
+		WScript.Quit
+	end if
+else
+	fullname = left(filename, sep) + "pdf"
+	if ext = "ppt" Or ext = "pptx" then
+		iSaveAsFileType = 32'pdf
+	elseif ext = "doc" Or ext = "docx" then
+		iSaveAsFileType = 17'pdf
+	else
+		msgbox("Sorry~")
+		WScript.Quit
+	end if
+end if
+myFile.SaveAs fullname, iSaveAsFileType, false
+app.Quit
