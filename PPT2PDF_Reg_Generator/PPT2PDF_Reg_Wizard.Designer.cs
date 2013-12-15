@@ -28,12 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PPT2PDF_Reg_Wizard));
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.btnStep1 = new System.Windows.Forms.Button();
-			this.btnStep2 = new System.Windows.Forms.Button();
 			this.btnStep3 = new System.Windows.Forms.Button();
-			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+			this.btnStep2 = new System.Windows.Forms.Button();
+			this.btnStep1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
+			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -57,17 +58,18 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(397, 228);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
-			// btnStep1
+			// btnStep3
 			// 
-			this.btnStep1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnStep1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.btnStep1.Location = new System.Drawing.Point(3, 3);
-			this.btnStep1.Name = "btnStep1";
-			this.btnStep1.Size = new System.Drawing.Size(391, 63);
-			this.btnStep1.TabIndex = 0;
-			this.btnStep1.Text = "第一步：选择放置脚本文件的文件夹";
-			this.btnStep1.UseVisualStyleBackColor = true;
-			this.btnStep1.Click += new System.EventHandler(this.btnStep1_Click);
+			this.btnStep3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnStep3.Enabled = false;
+			this.btnStep3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.btnStep3.Location = new System.Drawing.Point(3, 141);
+			this.btnStep3.Name = "btnStep3";
+			this.btnStep3.Size = new System.Drawing.Size(391, 63);
+			this.btnStep3.TabIndex = 2;
+			this.btnStep3.Text = "第三步：导入注册表文件";
+			this.btnStep3.UseVisualStyleBackColor = true;
+			this.btnStep3.Click += new System.EventHandler(this.btnStep3_Click);
 			// 
 			// btnStep2
 			// 
@@ -82,18 +84,17 @@
 			this.btnStep2.UseVisualStyleBackColor = true;
 			this.btnStep2.Click += new System.EventHandler(this.btnStep2_Click);
 			// 
-			// btnStep3
+			// btnStep1
 			// 
-			this.btnStep3.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnStep3.Enabled = false;
-			this.btnStep3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.btnStep3.Location = new System.Drawing.Point(3, 141);
-			this.btnStep3.Name = "btnStep3";
-			this.btnStep3.Size = new System.Drawing.Size(391, 63);
-			this.btnStep3.TabIndex = 2;
-			this.btnStep3.Text = "第三步：导入注册表文件";
-			this.btnStep3.UseVisualStyleBackColor = true;
-			this.btnStep3.Click += new System.EventHandler(this.btnStep3_Click);
+			this.btnStep1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnStep1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.btnStep1.Location = new System.Drawing.Point(3, 3);
+			this.btnStep1.Name = "btnStep1";
+			this.btnStep1.Size = new System.Drawing.Size(391, 63);
+			this.btnStep1.TabIndex = 0;
+			this.btnStep1.Text = "第一步：选择放置脚本文件的文件夹";
+			this.btnStep1.UseVisualStyleBackColor = true;
+			this.btnStep1.Click += new System.EventHandler(this.btnStep1_Click);
 			// 
 			// label1
 			// 
@@ -112,6 +113,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(397, 228);
 			this.Controls.Add(this.tableLayoutPanel1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "PPT2PDF_Reg_Wizard";
 			this.Text = "PPT2PDF";
 			this.Load += new System.EventHandler(this.PPT2PDF_Reg_Wizard_Load);
